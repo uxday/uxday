@@ -17,6 +17,7 @@
     --accent-blue: #15ADE2;
 
     --delay: 200;
+    --font-primary: 'Inclusive Sans', sans-serif;
 }
 
 /* Light Mode */
@@ -24,13 +25,16 @@
     :root {
         --text-primary: #000;
         --text-secondary: #111;
-        --background: #eee;
+        --background: #f3f3f3;
         --foreground: #fff;
     }
 }
 
 .x-logo{
     margin-right: 8px;
+    svg path {
+        fill: var(--text-primary) !important;
+    }
 }
 
 html{
@@ -40,10 +44,8 @@ html{
 }
 
 body{
-    font-family: sans-serif, Tahoma, Geneva, Verdana;
-
-
     color: var(--text-primary);
+    font-family: var(--font-primary);
 }
 
 .entry-box{
@@ -444,13 +446,13 @@ header{
       }
       
       .button-accent{
-        color: #1D2D32;
-        background: #5DE7C8;
+        color: var(--background);
+        background-color: var(--accent-red);
       }
       
       .button-secondary{
-        color: #D1D5D6;
-        background: #344246;
+        color: var(--text-secondary);
+        background: var(--background);
       }
       
       @media only screen and (max-width: 1300px) {
