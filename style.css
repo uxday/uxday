@@ -109,6 +109,26 @@ body{
     }
 }
 
+.anim-fade-in-up{
+    animation: fade-in-up 1s both;
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1)
+}
+
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.no-anim{
+    animation: none !important;
+}
+
 .delay-1{
     animation-delay: calc(var(--delay) * 1ms);
 }
@@ -292,10 +312,10 @@ header{
       
       .event-details{
         padding: 140px 40px 40px 40px;
-        position: absolute;
         right: 20%;
         top: 0;
         background: var(--foreground);
+        position: absolute;
       }
       
       .section-top{
@@ -455,6 +475,10 @@ header{
           background: none;
         }
       
+        .delay-m-3{
+            animation-delay: calc(var(--delay) * 3ms);
+        }
+
       }
       
       @media only screen and (max-width: 840px) {
