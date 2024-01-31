@@ -1,0 +1,23 @@
+body{
+    font-family: sans-serif, Tahoma, Geneva, Verdana;
+}
+
+
+
+#drag-1, #drag-2, #drag-3, #drag-4, #drag-5{
+    color: white;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    display: inline-block;
+    width: 48px;
+    height: auto;
+  }
+
+  #drag-1{
+    background-image: U.svg;
+  }
+
+  .center{
+    text-align: center;
+  }
