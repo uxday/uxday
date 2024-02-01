@@ -563,7 +563,7 @@ li {
     font-size: 18px;
     font-weight: var(--font-weight-bold);
     width: auto;
-    border-radius: 2px;
+    border-radius: 0 24px 0 12px;
     margin-right: 8px;
     margin-bottom: 8px;
     text-decoration: none;
