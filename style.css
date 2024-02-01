@@ -70,14 +70,11 @@ h2{
 
 .person-card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: auto;
     background-color: var(--foreground);
     transition: .2s;
-    /* padding: 20px 24px;
-    margin: 4px; */
-    margin-top: 24px;
-    margin-bottom: 40px;
+    margin: 40px;
     border-bottom: 2px solid var(--foreground);
 }
 
@@ -85,8 +82,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 16px;
-
+    margin-top: 16px;
 }
 
 /* .person-card:hover{
@@ -96,8 +92,8 @@ h2{
 } */
 
 .person-photo{
-    width: 48px;
-    height: 48px;
+    width: 200px;
+    height: 200px;
     border-radius: 0px 24px 0 12px;
 }
 
@@ -114,6 +110,24 @@ h2{
     margin: 0 0 0 0;
 }
 
+.img-overlay-wrap{
+    position: relative;
+    display: inline-block; /* <= shrinks container to image size */
+    transition: transform 150ms ease-in-out;
+}
+
+.isoverlay{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 240px;
+    height: 240px;
+    transition: .2s;
+}
+
+.isoverlay:hover{
+    transform: scale(.9);
+}
 
 .tab-container{
     margin-left: 28px;
@@ -570,6 +584,7 @@ h1 a:hover {
 
 
 .section {
+    display: inline-flex;
     margin: 40px 15% 0 15%;
     padding: 24px 32px;
     background-color: var(--foreground);
@@ -714,6 +729,7 @@ li {
     .section {
         margin: 40px 15% 0 15%;
         padding: 24px 32px;
+        flex-direction: row;
     }
 
     .section-top {
