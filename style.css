@@ -18,16 +18,18 @@
 
 
     --delay: 200;
-    --font-primary: 'Public Sans', sans-serif;
-    --font-weight-regular: 200;
-    --font-weight-bold: 500;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Source Serif 4', sans-serif;
+    --font-weight-light: 100;
+    --font-weight-regular: 300;
+    --font-weight-bold: 600;
 }
 
 /* Light Mode */
 @media (prefers-color-scheme: light) {
     :root {
         --text-primary: #000;
-        --text-secondary: #111;
+        --text-secondary: #444;
         --background: #f3f3f3;
         --foreground: #fff;
     }
@@ -55,42 +57,60 @@ body {
     font-weight: var(--font-weight-regular);
 }
 
+h2{
+    font-family: var(--font-secondary);
+    font-size: 2em;
+    line-height: 1.15em;
+    /* letter-spacing: -.05em; */
+    font-weight: var(--font-weight-bold);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .person-card{
-    display: inline-block;
-    width: 256px;
+    display: flex;
+    flex-direction: row;
     height: auto;
     background-color: var(--foreground);
     transition: .2s;
-    padding: 20px 24px;
-    margin: 4px;
+    /* padding: 20px 24px;
+    margin: 4px; */
+    margin-top: 24px;
+    margin-bottom: 40px;
     border-bottom: 2px solid var(--foreground);
 }
 
-.person-card:hover{
-    background: var(--background);
-    /* transform: translateY(-2px); */
-    border-bottom: 2px solid var(--accent-blue);
+.person-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 16px;
+
 }
 
+/* .person-card:hover{
+    background: var(--background);
+    transform: translateY(-2px);
+    border-bottom: 2px solid var(--accent-blue);
+} */
+
 .person-photo{
-    width: 128px;
-    height: 128px;
+    width: 48px;
+    height: 48px;
     border-radius: 0px 24px 0 12px;
 }
 
 .person-name{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: var(--font-weight-bold);
-    margin-top: 8px;
-    margin-bottom: 4px;
+    margin: 0 0 -4px 0;
 }
 
 .person-title{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: var(--font-weight-regular);
     color: var(--text-secondary);
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin: 0 0 0 0;
 }
 
 
@@ -207,18 +227,23 @@ body {
 
 .anim-spin-wheel {
     animation: spin-wheel 4s both infinite;
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1)
 }
 
 @keyframes spin-wheel {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(135deg) scale(1.2);
     }
 
     100% {
-        transform: rotate(270deg);
+        transform: rotate(270deg) scale(1);
     }
 }
+
 
 .wiggle-gentle {
     animation: wiggle-gentle 1s ease-in-out infinite;
@@ -465,22 +490,6 @@ header {
     opacity: 1 !important;
 }
 
-@media screen and (max-width: 600px) {
-    .slideshow>img {
-        width: 86%;
-        margin: 8px 6px 0 6px;
-    }
-
-    .move-right {
-        transform: translateX(calc(-86vw - 12px));
-    }
-
-    .move-left {
-        transform: translateX(calc(86vw + 12px));
-    }
-}
-
-
 
 
 
@@ -678,8 +687,11 @@ li {
 
 .button:hover {
     transform: translateY(-2px);
-    border-bottom: 2px solid var(--accent-blue);
+    /* border-bottom: 2px solid var(--accent-blue); */
     text-decoration: none;
+    outline: 1px solid var(--text-primary);
+    outline-offset: 2px;
+    outline-style: solid;
 }
 
 .button-accent {
@@ -696,6 +708,11 @@ li {
 
     table {
         overflow-x: scroll;
+    }
+
+    .section {
+        margin: 40px 15% 0 15%;
+        padding: 24px 32px;
     }
 
     .section-top {
@@ -722,12 +739,17 @@ li {
 
 @media only screen and (max-width: 840px) {
 
-
     :root {
         --logo-x: 14px;
     }
     body {
         font-size: 15px;
+    }
+
+    .section {
+        padding: 12px 32px 24px 32px;
+        margin: 116px 14px 4px 14px;
+        background-color: var(--foreground);
     }
 
     .section-top {
@@ -750,6 +772,17 @@ li {
         margin-right: 8px;
         margin-bottom: 8px;
     }
+    .slideshow>img {
+        width: 84vw;
+        margin: 8px 6px 0 6px;
+    }
 
+    .move-right {
+        transform: translateX(calc(-84vw - 12px));
+    }
+
+    .move-left {
+        transform: translateX(calc(84vw + 12px));
+    }
 
 }
