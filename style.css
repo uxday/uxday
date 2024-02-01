@@ -258,13 +258,21 @@ main {
 
 
 
-/* #drag-1:hover,
+#drag-1:hover,
 #drag-2:hover,
 #drag-3:hover,
 #drag-4:hover,
 #drag-5:hover {
-    animation: none;
-} */
+    cursor: grab;    
+}
+
+#drag-1:active,
+#drag-2:active,
+#drag-3:active,
+#drag-4:active,
+#drag-5:active, {
+    cursor: grabbing;
+}
 
 header {
     margin-bottom: 8px;
