@@ -1,7 +1,7 @@
 /* Dark Mode */
 :root {
     --text-primary: #fff;
-    --text-secondary: #eee;
+    --text-secondary: #ccc;
     --background: #111;
     --foreground: #222;
 
@@ -14,6 +14,8 @@
     --accent-yellow: #FFC800;
     --accent-red: #E6402B;
     --accent-blue: #15ADE2;
+    --accent-orange: #FD7560;
+
 
     --delay: 200;
     --font-primary: 'Public Sans', sans-serif;
@@ -51,6 +53,75 @@ body {
     color: var(--text-primary);
     font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
+}
+
+.person-card{
+    display: inline-block;
+    width: 256px;
+    height: auto;
+    background-color: var(--foreground);
+    transition: .2s;
+    padding: 20px 24px;
+    margin: 4px;
+    border-bottom: 2px solid var(--foreground);
+}
+
+.person-card:hover{
+    background: var(--background);
+    /* transform: translateY(-2px); */
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+.person-photo{
+    width: 128px;
+    height: 128px;
+    border-radius: 0px 24px 0 12px;
+}
+
+.person-name{
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.person-title{
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    color: var(--text-secondary);
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+
+.tab-container{
+    margin-left: 28px;
+}
+
+.tab{
+    display: inline-block;
+    padding: 16px 28px 16px 28px;
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.37px;
+    width: auto;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-bottom: 0px solid var(--foreground);
+    transition: .2s;
+}
+
+.tab:hover{
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--accent-red);
+}
+
+.tab-active{
+    background-color: var(--background);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--accent-red);
 }
 
 .entry-box {
@@ -472,15 +543,15 @@ h1 a:hover {
 }
 
 .event-details {
-    padding: 140px 40px 40px 40px;
-    right: 20%;
+    padding: 40px 40px 40px 40px;
+    right: 15%;
     top: 0;
     background: var(--foreground);
     position: absolute;
 }
 
 .section-top {
-    margin: 120px 45% 0 15%;
+    margin: 140px 40% 0 15%;
     padding: 24px 32px;
     z-index: 12;
     background-color: var(--foreground);
@@ -489,8 +560,9 @@ h1 a:hover {
 
 
 .section {
-    padding: 4% 20% 4% 20%;
-    margin: auto;
+    margin: 40px 15% 0 15%;
+    padding: 24px 32px;
+    background-color: var(--foreground);
 }
 
 th {
@@ -612,7 +684,7 @@ li {
 
 .button-accent {
     color: var(--background);
-    background-color: var(--accent-red);
+    background-color: var(--accent-orange);
 }
 
 .button-secondary {
