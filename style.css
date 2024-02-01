@@ -729,7 +729,7 @@ li {
     .section {
         margin: 40px 15% 0 15%;
         padding: 24px 32px;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .section-top {
@@ -772,10 +772,6 @@ li {
     .section-top {
         padding: 48px 32px 24px 32px;
         margin: 116px 14px 14px 14px;
-    }
-
-    .section {
-        padding: 24px 32px 24px 32px;
     }
 
     .button {
