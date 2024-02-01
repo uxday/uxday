@@ -36,6 +36,7 @@
 }
 
 .x-logo {
+    fill: var(--text-primary);
     margin-right: 8px;
     transition: transform 0.5s ease-in-out;
 }
@@ -689,13 +690,13 @@ li {
     transform: translateY(-2px);
     /* border-bottom: 2px solid var(--accent-blue); */
     text-decoration: none;
-    outline: 1px solid var(--text-primary);
+    outline: 2px solid var(--text-primary);
     outline-offset: 2px;
     outline-style: solid;
 }
 
 .button-accent {
-    color: var(--background);
+    color: var(--foreground);
     background-color: var(--accent-orange);
 }
 
