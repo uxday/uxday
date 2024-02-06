@@ -94,7 +94,8 @@ h2{
 .person-photo{
     width: 200px;
     height: 200px;
-    border-radius: 0px 24px 0 12px;
+    z-index: 4;
+    transition: .2s;
 }
 
 .person-name{
@@ -123,10 +124,16 @@ h2{
     width: 240px;
     height: 240px;
     transition: .2s;
+    z-index: 5;
 }
 
 .isoverlay:hover{
     transform: scale(.9);
+}
+
+.isoverlay:hover + .person-photo {
+    transform: scale(1.1);
+    border-radius: 0px 24px 0 12px;
 }
 
 .tab-container{
@@ -584,7 +591,7 @@ h1 a:hover {
 
 
 .section {
-    display: inline-flex;
+    display: flex;
     margin: 40px 15% 0 15%;
     padding: 24px 32px;
     background-color: var(--foreground);
