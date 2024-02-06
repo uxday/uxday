@@ -35,6 +35,11 @@
     }
 }
 
+spline-viewer{
+    width: auto;
+    height: 80vh;
+}
+
 .x-logo {
     fill: var(--text-primary);
     margin-right: 8px;
