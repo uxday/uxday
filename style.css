@@ -2,8 +2,8 @@
 :root {
     --text-primary: #fff;
     --text-secondary: #ccc;
-    --background: #111;
-    --foreground: #222;
+    --background: #222;
+    --foreground: #111;
 
     --logo-x: 15%;
     --logo-y: 72px;
@@ -37,7 +37,7 @@
 
 spline-viewer{
     width: auto;
-    height: 80vh;
+    height: 70vh;
 }
 
 .x-logo {
@@ -77,10 +77,10 @@ h2{
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: var(--foreground);
+    /* background-color: var(--foreground); */
     transition: .2s;
     margin: 40px;
-    border-bottom: 2px solid var(--foreground);
+    /* border-bottom: 2px solid var(--foreground); */
 }
 
 .person-details{
@@ -398,10 +398,25 @@ main {
 }
 
 header {
-    margin-bottom: 8px;
-    margin-left: calc(var(--logo-x) + .4em);
-    margin-top: calc(var(--logo-y) - 2em);
-    font-weight: var(--font-weight-bold);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    position: sticky;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: var(--foreground);
+    width: auto;
+    border-radius: 12px;
+    width: 800px;
+    margin: 40px auto;
+    z-index: 10;
+}
+
+.uxday-logo{
+    width: 96px;
+    height: auto;
+    fill: var(--text-primary);
 }
 
 .center {
@@ -550,17 +565,6 @@ body {
 h1 {
     display: inline-block;
     position: relative;
-    padding-bottom: 8px;
-}
-
-h1::after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    border-bottom: 2px solid var(--foreground);
-    content: ""
 }
 
 h1 a {
@@ -587,19 +591,23 @@ h1 a:hover {
 }
 
 .section-top {
-    margin: 140px 40% 0 15%;
+    margin: auto;
+    width: 800px;
     padding: 24px 32px;
     z-index: 12;
-    background-color: var(--foreground);
+    /* background-color: var(--foreground); */
     border-radius: 4px;
 }
 
 
+
 .section {
     display: flex;
-    margin: 40px 15% 0 15%;
+    flex-direction: row;
+    width: 800px;
+    margin: auto;
     padding: 24px 32px;
-    background-color: var(--foreground);
+    /* background-color: var(--foreground); */
 }
 
 th {
@@ -710,6 +718,7 @@ li {
     border-radius: 0 24px 0 12px;
     margin-right: 8px;
     margin-bottom: 8px;
+    margin-top: 8px;
     text-decoration: none;
 }
 
