@@ -67,8 +67,8 @@ footer{
     background-image: url('bussign.png');
     background-repeat: repeat-x;
     background-position-x: 0px;
-    background-position-y:bottom;
-    background-size: 25% 25%;
+    background-position-y: bottom;
+    background-size: 50%;
 }
 
 .bus-text{
