@@ -188,7 +188,7 @@
 setInterval(function() {
   var footer = document.querySelector('footer');
   var currentOffset = parseInt(footer.style.backgroundPositionX) || 0;
-  footer.style.backgroundPositionX = (currentOffset + 4) + 'px';
+  footer.style.backgroundPositionX = (currentOffset - 4) + 'px';
 }, 300);
     
 
