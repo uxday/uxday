@@ -30,7 +30,7 @@
       <path d="M1407.42 16.0002L640.185 16.0001C631.321 16.0001 625.516 25.2797 629.394 33.2503L1004.09 803.336C1008.42 812.243 1021.07 812.361 1025.57 803.536L1418.11 33.4498C1422.18 25.4659 1416.38 16.0002 1407.42 16.0002Z" fill="var(--text-primary)"/>
       <path d="M1229.19 406.229L1044.5 25.7271C1040.17 16.8061 1027.51 16.6886 1023.01 25.5279L820 424.786L1004.67 804.336C1009.01 813.243 1021.66 813.36 1026.16 804.535L1229.19 406.229Z" fill="var(--background)"/>
       </svg>
-    <a class="button button-accent" href="#register">Register now</a>
+    <a id="headerbtn" class="button button-accent" href="#register">REGISTER NOW</a>
   </header>
   <div class="bg-blue entry-box vw-100 anim-stretch-in delay-2"></div>
   <div class="bg-red entry-box vw-100 anim-stretch-in delay-3"></div>
@@ -49,7 +49,9 @@
       centered around the thrilling theme: 'The AI Moment'. This year, we're excited to host the event across three
       dynamic locations
       - Bangalore, Noida, and Hyderabad, each offering a unique blend of insights, experiences, and opportunities.
-    </p>  </div>
+    </p>  
+    <a class="button button-accent anim-fade-in-up delay-3" href="#register">REGISTER NOW</a>
+  </div>
 
   <div class="section-1-bg"></div>
 
@@ -200,6 +202,16 @@ setInterval(function() {
         header.classList.add('glass-shadow');
       } else {
         header.classList.remove('glass-shadow');
+      }
+      var headerbtn = document.getElementById('headerbtn');
+      if (window.scrollY * 2 > window.innerHeight) {
+        headerbtn.style.transform = "translateY(0)";
+        headerbtn.style.opacity = "1";
+
+      } else {
+        headerbtn.style.transform = "translateY(-100px)";
+        headerbtn.style.opacity = "0";
+
       }
     });
 
