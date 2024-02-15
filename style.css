@@ -34,9 +34,9 @@
     :root {
         --text-primary: #000;
         --text-secondary: #36373b;
-        --background: #fff;
-        --foreground: #f3f3f3;
-        --glass-bg: rgba(255, 255, 255, 0.75);
+        --background: #f4f4f4;
+        --foreground: #fff;
+        --glass-bg: rgba(255, 255, 255, 0.9);
         --glass-border: rgba(255, 255, 255, 0.3);
 
         --bus-img: url('bussign-light.png');
@@ -660,14 +660,14 @@ h1 a:hover {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 12px 12px 12px 20px;
     position: sticky;
     top: 40px;
     left: 0;
     right: 0;
     width: auto;
     border-radius: 12px;
-    width: 800px;
+    width: 812px;
     margin: 40px auto 0 auto;
     z-index: 10;
 }
@@ -691,7 +691,7 @@ header {
 .section-top {
     margin: 0px auto 60px auto;
     width: 800px;
-    padding: 24px 32px;
+    padding: 8px 32px 24px 32px;
     z-index: 12;
     /* background-color: var(--foreground); */
     border-radius: 4px;
@@ -980,7 +980,7 @@ border-radius: 4px;
 
     .section-top {
 
-        margin: 40px 24px;
+        margin: 8px 24px 40px 24px;
         width: auto;
         padding: 0;
     }
