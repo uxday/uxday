@@ -112,58 +112,6 @@ body {
     font-weight: var(--font-weight-regular);
 }
 
-
-  /* add delay at the end of animation so you dont start while another div is going */
-  @keyframes marquee {
-    0% { left: 100%; }
-    50% { left: -100%; }
-    100% {left: -100%}
-  }
-
-.marquee {
-    font-size: 32px;
-    height: 56px;
-    line-height: 60px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background-color: var(--text-primary);
-    color: var(--background);
-  }
-
-  
-  /* would need to be adjusted depending on time */
-  .marquee .marqueeone{
-    animation: marquee 40s linear infinite;
-  }
-  
-  .marquee .marqueetwo{
-    animation: marquee 40s linear 10s infinite;
-  }
-  
-  .marquee .marqueethree{
-    animation: marquee 40s linear 20s infinite;
-  }
-  
-  .marquee .marqueefour{
-    animation: marquee 40s linear 30s infinite;
-  }
-  
-  /* even out the elements */
-  .marquee div {
-    position: absolute;
-    left: 100%;
-    width: auto;
-    transition: .2s;
-  }
-  
-  .marquee:hover div {
-    animation-play-state: paused;
-    transform: scale(1.2);
-  }
-  
-
-
 .person-card{
     display: inline-flex;
     flex-direction: column;

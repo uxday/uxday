@@ -32,10 +32,10 @@
       </svg>
     <a id="headerbtn" class="button button-accent" href="#register">REGISTER NOW</a>
   </header>
-  <div class="bg-blue entry-box vw-100 anim-stretch-in delay-2"></div>
-  <div class="bg-red entry-box vw-100 anim-stretch-in delay-3"></div>
-  <div class="bg-yellow entry-box vw-100 anim-stretch-in delay-4"></div>
-  <div class="bg-background entry-box vw-100 anim-stretch-in delay-6"></div>
+  <div id="bg1" class="bg-blue entry-box vw-100 anim-stretch-in delay-2"></div>
+  <div id="bg2" class="bg-red entry-box vw-100 anim-stretch-in delay-3"></div>
+  <div id="bg3" class="bg-yellow entry-box vw-100 anim-stretch-in delay-4"></div>
+  <div id="bg4" class="bg-background entry-box vw-100 anim-stretch-in delay-6"></div>
 
   <div class="section-top">
     <h1 class="text-primary anim-fade-in-up delay-1">
@@ -214,13 +214,25 @@ setInterval(function() {
         headerbtn.style.opacity = "0";
         setTimeout(function() {
   headerbtn.innerHTML = "HIDDEN BUTTON";
+  headerbtn.addEventListener('click', replayAnim);
 }, 150);        
       }
     });
 
+function replayAnim() {
+  document.getElementById('bg1').classList.remove('anim-stretch-in');
+  document.getElementById('bg2').classList.remove('anim-stretch-in');
+  document.getElementById('bg3').classList.remove('anim-stretch-in');
+  document.getElementById('bg4').classList.remove('anim-stretch-in');
+  setTimeout(function() {
+  document.getElementById('bg1').classList.add('anim-stretch-in');
+  document.getElementById('bg2').classList.add('anim-stretch-in');
+  document.getElementById('bg3').classList.add('anim-stretch-in');
+  document.getElementById('bg4').classList.add('anim-stretch-in');
+} , 50);
+}
 
-  // Call moveLeft function every 1000ms (1 second)
-  setInterval(moveLeft, 1000);
+
 
 // Add glass shadow to header on scroll
 window.addEventListener('scroll', function() {
