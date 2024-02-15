@@ -32,7 +32,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --text-primary: #000;
-        --text-secondary: #444;
+        --text-secondary: #36373b;
         --background: #fff;
         --foreground: #f3f3f3;
         --glass-bg: rgba(255, 255, 255, 0.5);
@@ -77,6 +77,8 @@ html {
 }
 
 body {
+    margin: 0;
+    line-height: 2em;
     color: var(--text-primary);
     font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
@@ -90,7 +92,7 @@ footer{
     position: relative;
 }
   /* add delay at the end of animation so you dont start while another div is going */
-  /* @keyframes marquee {
+  @keyframes marquee {
     0% { left: 100%; }
     50% { left: -100%; }
     100% {left: -100%}
@@ -136,7 +138,7 @@ footer{
   .marquee:hover div {
     animation-play-state: paused;
     transform: scale(1.2);
-  } */
+  }
   
 
 
@@ -146,7 +148,7 @@ footer{
     height: auto;
     /* background-color: var(--foreground); */
     transition: .2s;
-    margin: 40px;
+    margin: 20px;
     /* border-bottom: 2px solid var(--foreground); */
 }
 
@@ -164,8 +166,8 @@ footer{
 } */
 
 .person-photo{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     z-index: 4;
     transition: .2s;
 }
@@ -193,8 +195,8 @@ footer{
     position: absolute;
     top: -20px;
     left: -20px;
-    width: 240px;
-    height: 240px;
+    width: 220px;
+    height: 220px;
     transition: .2s;
     z-index: 5;
 }
@@ -587,14 +589,6 @@ main {
 
 
 
-
-body {
-    font-size: 18px;
-    letter-spacing: -0.3px;
-    line-height: 28px;
-    margin: 0;
-}
-
  .section-1-bg {
     /* background: url(header-bg.png);
     background-position: center; */
@@ -662,20 +656,20 @@ header {
     width: 900px;
     margin-left: calc((100vw - 900px)/2);
     margin-top: 90px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .section {
-    /* display: flex;
-    flex-direction: row; */
-    align-items: center;
-    width: 880px;
+    display: flex;
+    flex-direction: row; 
+    /* align-items: center; */
+    width: 800px;
     margin: 0 auto 80px auto; 
     /* background-color: var(--foreground); */
 }
 
 .section-top {
-    margin: 40px auto 100px auto;
+    margin: 40px auto 60px auto;
     width: 800px;
     padding: 24px 32px;
     z-index: 12;
@@ -684,7 +678,7 @@ header {
 }
 
 .section-header{
-    padding-left: 40px;
+    padding-right: 40px;
 }
 
 th {
@@ -732,12 +726,20 @@ h1 {
 
 .text-secondary{
     color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 h2{
     font-weight: 400;
     font-size: 20px;
     color: var(--text-primary);
+}
+
+h3{
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
 ul {
@@ -844,6 +846,9 @@ border-radius: 6px;
 
     .section {
         width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     header{
