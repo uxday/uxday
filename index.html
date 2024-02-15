@@ -198,19 +198,19 @@ setInterval(function() {
     // Add glass shadow to header on scroll
     window.addEventListener('scroll', function() {
       var header = document.querySelector('header');
-      if (window.scrollY * 2 > window.innerHeight) {
+      if (window.scrollY * 1.8 > window.innerHeight) {
         header.classList.add('glass-shadow');
       } else {
         header.classList.remove('glass-shadow');
       }
       var headerbtn = document.getElementById('headerbtn');
-      if (window.scrollY * 2 > window.innerHeight) {
-        headerbtn.style.transform = "translateY(0)";
+      if (window.scrollY > .6 * window.innerHeight) {
+        // headerbtn.style.transform = "translateY(0)";
         headerbtn.style.opacity = "1";
         headerbtn.innerHTML = "REGISTER NOW";
 
       } else {
-        headerbtn.style.transform = "translateY(-60px)";
+        // headerbtn.style.transform = "translateY(-60px)";
         headerbtn.style.opacity = "0";
         setTimeout(function() {
   headerbtn.innerHTML = "HIDDEN BUTTON";
