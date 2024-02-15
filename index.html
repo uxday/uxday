@@ -207,11 +207,14 @@ setInterval(function() {
       if (window.scrollY * 2 > window.innerHeight) {
         headerbtn.style.transform = "translateY(0)";
         headerbtn.style.opacity = "1";
+        headerbtn.innerHTML = "REGISTER NOW";
 
       } else {
-        headerbtn.style.transform = "translateY(-100px)";
+        headerbtn.style.transform = "translateY(-60px)";
         headerbtn.style.opacity = "0";
-
+        setTimeout(function() {
+  headerbtn.innerHTML = "HIDDEN BUTTON";
+}, 150);        
       }
     });
 
