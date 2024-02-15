@@ -44,13 +44,14 @@
 border-radius: 16px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-border: 1px solid var(--glass-border);
 transition: 1s;
+border: 1px solid transparent;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.0);
 }
 
 .glass-shadow{
     background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,6 +81,64 @@ body {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
 }
+
+footer{
+    height: auto;
+    font-size: 40px;
+    background-color: var(--text-primary);
+    padding: 20px 0;
+    position: relative;
+}
+  /* add delay at the end of animation so you dont start while another div is going */
+  /* @keyframes marquee {
+    0% { left: 100%; }
+    50% { left: -100%; }
+    100% {left: -100%}
+  }
+
+.marquee {
+    font-size: 32px;
+    height: 56px;
+    line-height: 60px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--text-primary);
+    color: var(--background);
+  }
+
+  
+  /* would need to be adjusted depending on time */
+  .marquee .marqueeone{
+    animation: marquee 40s linear infinite;
+  }
+  
+  .marquee .marqueetwo{
+    animation: marquee 40s linear 10s infinite;
+  }
+  
+  .marquee .marqueethree{
+    animation: marquee 40s linear 20s infinite;
+  }
+  
+  .marquee .marqueefour{
+    animation: marquee 40s linear 30s infinite;
+  }
+  
+  /* even out the elements */
+  .marquee div {
+    position: absolute;
+    left: 100%;
+    width: auto;
+    transition: .2s;
+  }
+  
+  .marquee:hover div {
+    animation-play-state: paused;
+    transform: scale(1.2);
+  } */
+  
+
 
 .person-card{
     display: inline-flex;
@@ -611,7 +670,7 @@ header {
     flex-direction: row; */
     align-items: center;
     width: 880px;
-    margin: auto;
+    margin: 0 auto 80px auto; 
     /* background-color: var(--foreground); */
 }
 
@@ -655,11 +714,11 @@ tr:nth-child(odd) {
 
 a {
     text-decoration: none;
-    color: #02877E;
+    color: var(--background);
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 h1 {
@@ -750,6 +809,7 @@ border-radius: 6px;
     margin-bottom: 8px;
     margin-top: 8px;
     text-decoration: none;
+    transition: .2s;
 }
 
 .button:hover {
@@ -815,12 +875,10 @@ border-radius: 6px;
 
     .glass{
         border-radius: 0px;
-        border: none;
     }
 
     .glass-shadow{
         border-radius: 0px;
-
     }
 
     .header-img{
