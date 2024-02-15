@@ -4,8 +4,8 @@
     --text-secondary: #ccc;
     --background: #222;
     --foreground: #111;
-    --glass-bg: rgba(50, 50, 50, 0.6);
-    --glass-border: rgba(150, 150, 150, 0.3);
+    --glass-bg: rgba(50, 50, 50, 0.85);
+    --glass-border: rgba(150, 150, 150, 0.2);
 
 
     --logo-x: 15%;
@@ -55,6 +55,26 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+.x-logo {
+    fill: var(--text-primary);
+    margin: 0 8px;
+    transition: transform 0.5s ease-in-out;
+    animation: move-left 500ms infinite;
+}
+
+footer{
+    height: 120px;
+    background-image: url('bussign.png');
+    background-repeat: repeat-x;
+    background-position-x: 0px;
+    background-position-y:bottom;
+    background-size: 25% 25%;
+}
+
+.bus-text{
+    width: 800px;
+}
+
 spline-viewer{
     width: auto;
     height: 70vh;
@@ -84,13 +104,7 @@ body {
     font-weight: var(--font-weight-regular);
 }
 
-footer{
-    height: auto;
-    font-size: 40px;
-    background-color: var(--text-primary);
-    padding: 20px 0;
-    position: relative;
-}
+
   /* add delay at the end of animation so you dont start while another div is going */
   @keyframes marquee {
     0% { left: 100%; }
