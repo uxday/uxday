@@ -35,7 +35,7 @@
         --text-secondary: #36373b;
         --background: #fff;
         --foreground: #f3f3f3;
-        --glass-bg: rgba(255, 255, 255, 0.5);
+        --glass-bg: rgba(255, 255, 255, 0.75);
         --glass-border: rgba(255, 255, 255, 0.3);
     }
 }
@@ -893,13 +893,23 @@ border-radius: 4px;
     }
 
     .person-card{
+        margin-top: 40px;
+    }
+
+    .person-card:nth-child(odd) {
         border-left: 4px solid var(--text-primary);
+    }
+
+    .person-card:nth-child(even) {
+        text-align: right;
+        border-right: 4px solid var(--text-primary);
     }
 
     .person-photo{
         margin-left: 10vw;
-        width: 80vw;
-        height: 60vw;
+        margin-right: 10vw;
+        width: 70vw;
+        height: 70vw;
         object-fit: cover;
         /* object-position: 25% 25%;  */
         border-radius: 4px;
@@ -910,9 +920,10 @@ border-radius: 4px;
     }
 
     .isoverlay{
-        width: calc(80vw + 40px);
-        height: calc(60vw + 40px);
-        
+        width: calc(70vw + 20px);
+        height: calc(70vw + 20px);
+        top: -10px;
+        left: -10px;
     }
 
     .isoverlay:hover{
@@ -954,8 +965,9 @@ border-radius: 4px;
     .section-header{
         background-color: var(--text-primary);
         color: var(--background);
-        padding: 0 0 24px 24px;
-        width: calc(100vw - 24px);
+        padding: 24px;
+        border-radius: 6px;
+        min-width: 80vw;
     }
 
     .button-accent-darkinvert{
@@ -965,6 +977,7 @@ border-radius: 4px;
 
     .person-details{
         margin-left: 16px;
+        margin-right: 16px;
     }
 
     .slideshow>img {
