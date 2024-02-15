@@ -4,7 +4,7 @@
     --text-secondary: #ccc;
     --background: #222;
     --foreground: #111;
-    --glass-bg: rgba(50, 50, 50, 0.4);
+    --glass-bg: rgba(50, 50, 50, 0.6);
     --glass-border: rgba(150, 150, 150, 0.3);
 
 
@@ -41,16 +41,16 @@
 }
 
 .glass{
-background: var(--glass-bg);
 border-radius: 16px;
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 border: 1px solid var(--glass-border);
 transition: 1s;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.0);
 }
 
 .glass-shadow{
+    background: var(--glass-bg);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -405,20 +405,7 @@ main {
     cursor: grabbing;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 20px;
-    position: sticky;
-    top: 40px;
-    left: 0;
-    right: 0;
-    width: auto;
-    border-radius: 12px;
-    width: 800px;
-    margin: 40px auto;
-    z-index: 10;
-}
+
 
 .uxday-logo{
     width: 96px;
@@ -597,6 +584,28 @@ h1 a:hover {
     position: absolute;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    position: sticky;
+    top: 40px;
+    left: 0;
+    right: 0;
+    width: auto;
+    border-radius: 12px;
+    width: 800px;
+    margin: 40px auto;
+    z-index: 10;
+}
+
+.header-img{
+    width: 900px;
+    margin-left: calc((100vw - 900px)/2);
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
 .section {
     /* display: flex;
     flex-direction: row; */
@@ -732,11 +741,11 @@ li {
 
 .button {
     display: inline-block;
-    padding: 18px 36px 18px 36px;
-    font-size: 18px;
+    padding: 12px 24px 12px 24px;
+    font-size: 16px;
     font-weight: var(--font-weight-bold);
     width: auto;
-    border-radius: 0 24px 0 12px;
+border-radius: 6px;
     margin-right: 8px;
     margin-bottom: 8px;
     margin-top: 8px;
@@ -753,8 +762,8 @@ li {
 }
 
 .button-accent {
-    color: var(--foreground);
-    background-color: var(--accent-orange);
+    color: var(--background);
+    background-color: var(--text-primary);
 }
 
 .button-secondary {
@@ -762,39 +771,7 @@ li {
     background: var(--glass-bg);
 }
 
-@media only screen and (max-width: 1300px) {
 
-    table {
-        overflow-x: scroll;
-    }
-
-    .section {
-        /* margin: 40px 15% 0 15%;
-        padding: 24px 32px;
-        flex-direction: column; */
-    }
-
-    .section-top {
-        /* padding: 24px 32px;
-        margin: 120px 15% 0 15%; */
-    }
-
-    .event-details {
-        padding: 0px 40px 20px 0px;
-        margin-bottom: 28px;
-        margin-top: 0px;
-        border-radius: 4px;
-        position: relative;
-        right: auto;
-        top: auto;
-        background: none;
-    }
-
-    .delay-m-3 {
-        animation-delay: calc(var(--delay) * 3ms);
-    }
-
-}
 
 @media only screen and (max-width: 840px) {
 
@@ -806,15 +783,47 @@ li {
     }
 
     .section {
-        padding: 12px 32px 24px 32px;
-        margin: 116px 14px 4px 14px;
-        background-color: var(--foreground);
+        width: auto;
     }
 
-    /* .section-top {
-        padding: 48px 32px 24px 32px;
-        margin: 116px 14px 14px 14px;
-    } */
+    header{
+        width: auto;
+        border-radius: 0px;
+        margin: 0;
+        top: 0;
+    }
+
+    .person-photo{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .isoverlay{
+        width: calc(60vw + 40px);
+        height: calc(60vw + 40px);
+        
+    }
+
+    .glass{
+        border-radius: 0px;
+    }
+
+    .glass-shadow{
+        border-radius: 0px;
+    }
+
+    .header-img{
+        width: calc(100vw - 40px);
+        margin-left: 10px;
+    }
+
+
+    .section-top {
+
+        margin: 0 24px;
+        width: auto;
+        padding: 0;
+    }
 
     .button {
         display: inline-block;

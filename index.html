@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="style.css">
   <link type="application/atom+xml" rel="alternate" href="https://gyanl.com/feed.xml" title="Gyan Lakhwani" />
 
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.48/build/spline-viewer.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +34,8 @@
 </head>
 
 <body>
-  <spline-viewer url="https://prod.spline.design/eFAyhO8zkUNfaEEZ/scene.splinecode"></spline-viewer>
-  <header class="glass">
+  <img class="header-img" src="header.png">
+  <header class="glass anim-fade-in-up">
       <svg class="uxday-logo" width="1500" height="1080" viewBox="0 0 1500 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M25.8496 951.099V999.868C25.8496 1005.6 26.9238 1010.36 29.0723 1014.16C32.2591 1019.88 37.6302 1022.75 45.1855 1022.75C54.2448 1022.75 60.4036 1019.65 63.6621 1013.46C65.4167 1010.09 66.2939 1005.56 66.2939 999.868V951.099H77.1436V995.41C77.1436 1005.11 75.8366 1012.58 73.2227 1017.81C68.4245 1027.33 59.3652 1032.09 46.0449 1032.09C32.7246 1032.09 23.6833 1027.33 18.9209 1017.81C16.307 1012.58 15 1005.11 15 995.41V951.099H25.8496Z" />
         <path d="M100.508 1030H87.6172L115.869 989.556L89.3896 951.099H102.764L122.905 981.284L142.886 951.099H155.615L129.136 989.556L156.904 1030H143.638L122.368 997.559L100.508 1030Z" />
@@ -64,7 +63,7 @@
         <path d="M1419.28 27.0002L652.054 27.0001C643.19 27.0001 637.385 36.2797 641.263 44.2503L1015.96 814.336C1020.29 823.243 1032.94 823.361 1037.44 814.536L1429.98 44.4498C1434.05 36.4659 1428.25 27.0002 1419.28 27.0002Z" />
         <path d="M1241.05 417.229L1056.37 36.7271C1052.04 27.8061 1039.38 27.6886 1034.88 36.5279L831.869 435.786L1016.54 815.336C1020.88 824.243 1033.53 824.36 1038.03 815.535L1241.05 417.229Z" fill="white"/>
         </svg>
-    <a class="button button-accent anim-fade-in-up delay-3" href="#register">Register now</a>
+    <a class="button button-accent" href="#register">Register now</a>
   </header>
   <div class="bg-blue entry-box vw-100 anim-stretch-in delay-1"></div>
   <div class="bg-red entry-box vw-100 anim-stretch-in delay-2"></div>
@@ -83,10 +82,7 @@
       centered around the thrilling theme: 'The AI Moment'. This year, we're excited to host the event across three
       dynamic locations
       - Bangalore, Noida, and Hyderabad, each offering a unique blend of insights, experiences, and opportunities.
-    </p>
-    <a class="button button-accent anim-fade-in-up delay-3" href="#register">Register now</a>
-    <a class="button button-secondary anim-fade-in-up delay-4" href="#who">More info</a>
-  </div>
+    </p>  </div>
 
   <div class="section-1-bg"></div>
 
@@ -130,7 +126,10 @@
 
   </div>
   <div class="section">
-
+    <div class="section-header">
+      <h1 class="text-primary">Hyderabad Campus</h1>
+      <h2 class="text-secondary">15 March 2024 | Microsoft Gachibowli</h2>
+    </div>
     <div class="person-card">
       <div class="img-overlay-wrap">
         <img class="isoverlay" src="frame-2.svg">
@@ -166,6 +165,47 @@
 
   </div>
 
+</div>
+<div class="section">
+  <div class="section-header">
+    <h1 class="text-primary">Hyderabad Campus</h1>
+    <h2 class="text-secondary">15 March 2024 | Microsoft Gachibowli</h2>
+  </div>
+  <div class="person-card">
+    <div class="img-overlay-wrap">
+      <img class="isoverlay" src="frame-2.svg">
+      <img class="person-photo" src="person3.jpg">
+    </div>
+    <div class="person-details">
+      <p class="person-name">Monty Monospacer</p>
+      <p class="person-title">Quirky Kerning King</p>
+    </div>
+  </div>
+
+  <div class="person-card">
+    <div class="img-overlay-wrap">
+      <img class="isoverlay" src="frame-3.svg">
+      <img class="person-photo" src="person2.jpg">
+    </div>
+    <div class="person-details">
+      <p class="person-name">Ingrid Infographica</p>
+      <p class="person-title">Hyperpop Vocalist</p>
+    </div>
+  </div>
+
+  <div class="person-card">
+    <div class="img-overlay-wrap">
+      <img class="isoverlay" src="frame-4.svg">
+      <img class="person-photo" src="person1.jpg">
+    </div>
+    <div class="person-details">
+      <p class="person-name">Cassie Cropcircle</p>
+      <p class="person-title">Data Distortionist</p>
+    </div>
+  </div>
+
+</div>
+
   </div>
 <footer>
   <a class="button button-accent anim-fade-in-up delay-3" href="#register">Register now</a>
@@ -175,7 +215,7 @@
     // Add glass shadow to header on scroll
 window.addEventListener('scroll', function() {
   var header = document.querySelector('header');
-  if (window.scrollY > window.innerHeight) {
+  if (window.scrollY * 2 > window.innerHeight) {
     header.classList.add('glass-shadow');
   } else {
     header.classList.remove('glass-shadow');
