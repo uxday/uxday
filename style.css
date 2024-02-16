@@ -59,10 +59,6 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-#headerbtn{
-    transition: .15s;
-}
-
 .x-logo {
     fill: var(--text-primary);
     margin: 0 8px;
@@ -76,7 +72,7 @@ footer{
     background-repeat: repeat-x;
     background-position-x: 0px;
     background-position-y: bottom;
-    background-size: 50%;
+    background-size: 25%;
 }
 
 .bus-text{
@@ -779,11 +775,21 @@ li {
     font-weight: var(--font-weight-bold);
     width: auto;
 border-radius: 6px;
-    margin-right: 8px;
+margin-left: -2px;
+    margin-right: 2px;
     margin-bottom: 2px;
     margin-top: 2px;
     text-decoration: none;
     transition: .2s;
+}
+
+.button:hover {
+    opacity: 1 !important;
+    /* border-bottom: 2px solid var(--accent-blue); */
+    text-decoration: none;
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+    outline-style: solid;
 }
 
 .button-small{
@@ -798,15 +804,15 @@ border-radius: 4px;
     transition: .2s;
 }
 
-.button:hover {
+.button-small:hover {
     opacity: 1 !important;
-    transform: translateY(-2px);
     /* border-bottom: 2px solid var(--accent-blue); */
     text-decoration: none;
     outline: 2px solid var(--text-primary);
     outline-offset: 2px;
     outline-style: solid;
 }
+
 
 .button-accent {
     color: var(--background);
