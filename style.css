@@ -781,6 +781,7 @@ margin-left: -2px;
     margin-top: 2px;
     text-decoration: none;
     transition: .2s;
+    height: fit-content;
 }
 
 .button:hover {
@@ -793,6 +794,7 @@ margin-left: -2px;
 }
 
 .button-small{
+    height: fit-content;
     display: inline-block;
     padding: 2px 14px;
     font-size: 11px;
@@ -859,6 +861,8 @@ border-radius: 4px;
         padding: 6px 16px;
         border-radius: 4px;
         font-size: 14px;
+        margin: 4px 0 4px -2px;
+        vertical-align: middle;
     }
 
     .section {
