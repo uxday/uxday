@@ -774,14 +774,14 @@ li {
 
 .button {
     display: inline-block;
-    padding: 12px 24px 12px 24px;
-    font-size: 16px;
+    padding: 10px 24px 10px 24px;
+    font-size: 14px;
     font-weight: var(--font-weight-bold);
     width: auto;
 border-radius: 6px;
     margin-right: 8px;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-bottom: 2px;
+    margin-top: 2px;
     text-decoration: none;
     transition: .2s;
 }

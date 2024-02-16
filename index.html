@@ -30,7 +30,7 @@
       <path d="M1407.42 16.0002L640.185 16.0001C631.321 16.0001 625.516 25.2797 629.394 33.2503L1004.09 803.336C1008.42 812.243 1021.07 812.361 1025.57 803.536L1418.11 33.4498C1422.18 25.4659 1416.38 16.0002 1407.42 16.0002Z" fill="var(--text-primary)"/>
       <path d="M1229.19 406.229L1044.5 25.7271C1040.17 16.8061 1027.51 16.6886 1023.01 25.5279L820 424.786L1004.67 804.336C1009.01 813.243 1021.66 813.36 1026.16 804.535L1229.19 406.229Z" fill="var(--background)"/>
       </svg>
-    <a id="headerbtn" class="button button-accent" href="#register">REGISTER NOW</a>
+    <a id="headerbtn" class="button button-accent" href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">REGISTER NOW</a>
   </header>
   <div id="bg1" class="bg-blue entry-box vw-100 anim-stretch-in delay-2"></div>
   <div id="bg2" class="bg-red entry-box vw-100 anim-stretch-in delay-3"></div>
@@ -50,7 +50,7 @@
       dynamic locations
       - Bangalore, Noida, and Hyderabad, each offering a unique blend of insights, experiences, and opportunities.
     </p>  
-    <a class="button button-accent anim-fade-in-up delay-3" href="#register">REGISTER NOW</a>
+    <a class="button button-accent anim-fade-in-up delay-3" href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">REGISTER NOW</a>
   </div>
 
   <div class="section-1-bg"></div>
@@ -59,7 +59,7 @@
     <div class="section-header">
     <h1 class="text-primary-darkinvert">Hyderabad Campus</h1>
     <h3 class="text-secondary-darkinvert">Microsoft Gachibowli<br>Address Line 1<br>Address Line 2</h3>
-    <a class="button-small button-accent-darkinvert" href="#register">Open Location</a>
+    <a class="button-small button-accent-darkinvert" href="#hydloc">Open Location</a>
 
   </div>
     <div class="person-card">
@@ -180,10 +180,9 @@
 </div>
 
   </div>
-
-  <footer>
-    
-  </footer>
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">
+  <footer></footer>
+</a>
   <script>
 
 // Increase x offset in background-position of <footer> by 4px every 4 seconds
@@ -206,6 +205,7 @@ setInterval(function() {
       var headerbtn = document.getElementById('headerbtn');
       if (window.scrollY > .6 * window.innerHeight) {
         // headerbtn.style.transform = "translateY(0)";
+        headerbtn.style.display = "inline";
         headerbtn.style.opacity = "1";
         headerbtn.innerHTML = "REGISTER NOW";
 
@@ -213,7 +213,7 @@ setInterval(function() {
         // headerbtn.style.transform = "translateY(-60px)";
         headerbtn.style.opacity = "0";
         setTimeout(function() {
-  headerbtn.innerHTML = "HIDDEN BUTTON";
+  headerbtn.style.display = "none";
   headerbtn.addEventListener('click', replayAnim);
 }, 200);        
       }
