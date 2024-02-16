@@ -627,6 +627,10 @@ header {
     margin-bottom: 20px;
 }
 
+.header-img:hover{
+    cursor:
+}
+
 .section {
     display: flex;
     flex-direction: row; 
