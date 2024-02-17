@@ -852,10 +852,6 @@ border-radius: 4px;
         font-size: 17px;
     }
 
-    .uxday-logo{
-        width: 64px;
-    }
-
     footer{
         background-size: 150%;
     }
@@ -887,7 +883,7 @@ border-radius: 4px;
         width: auto;
         margin: 0;
         top: 0;
-        padding: 4px 14px 4px 22px;
+        padding: 8px 14px 8px 22px;
     }
 
     #headerbtn{
