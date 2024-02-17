@@ -185,7 +185,7 @@
 </a>
   <script>
 
-
+// Set higher z-index for stripes so content scrolls under them.
 function fixStripeZ() {
   document.getElementById('bg1').style.height = '20px';
   document.getElementById('bg1').style.zIndex = '10';
@@ -196,11 +196,10 @@ function fixStripeZ() {
   document.getElementById('bg3').style.height = '10px';
   document.getElementById('bg3').style.zIndex = '10';
 }
-// Wait for entry anim to play and then fix stripes
+// Wait for entry anim to play and then fix stripe z-index
 setTimeout(fixStripeZ, 2500);
 
-
-    
+// Get the header and header button elements
 var header = document.querySelector('header');
 var headerbtn = document.getElementById('headerbtn');
 
@@ -230,10 +229,9 @@ function handleScroll(entries) {
   }
 }
 
-// Wait 2000ms before setting up intersection observer
+// Wait for load anim to play before setting up intersection observer
 setTimeout(function() {
-
-  // Create an Intersection Observer instance
+// Create an Intersection Observer instance
 var observer = new IntersectionObserver(handleScroll, { threshold: 0 });
 // Observe the topbtn element
   observer.observe(document.getElementById('topbtn'));
@@ -247,6 +245,7 @@ function replayAnim() {
   document.getElementById('bg2').classList.remove('anim-stretch-in');
   document.getElementById('bg3').classList.remove('anim-stretch-in');
   document.getElementById('bg4').classList.remove('anim-stretch-in');
+  
   setTimeout(function() {
   document.getElementById('bg1').classList.add('anim-stretch-in');
   document.getElementById('bg2').classList.add('anim-stretch-in');
@@ -256,7 +255,7 @@ function replayAnim() {
 }
 
 // Marquee scroll in footer
-// Increase x offset in background-position of <footer> by 3px every 4 seconds
+// Increase x offset in background-position of <footer> by 3px every 200 ms
   setInterval(function() {
   var footer = document.querySelector('footer');
   var currentOffset = parseInt(footer.style.backgroundPositionX) || 0;
