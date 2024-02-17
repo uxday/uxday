@@ -185,6 +185,22 @@
 </a>
   <script>
 
+
+function fixStripeZ() {
+  document.getElementById('bg1').style.height = '20px';
+  document.getElementById('bg1').style.zIndex = '10';
+
+  document.getElementById('bg2').style.height = '20px';
+  document.getElementById('bg2').style.zIndex = '10';
+
+  document.getElementById('bg3').style.height = '10px';
+  document.getElementById('bg3').style.zIndex = '10';
+}
+
+setTimeout(fixStripeZ, 2500);
+
+
+
 var switchY = 0;
 getTopButtonPosition();
 console.log("Yo " + switchY);
@@ -199,46 +215,44 @@ function getTopButtonPosition() {
 window.addEventListener('resize', getTopButtonPosition);
 
 // Marquee scroll in footer
-// Increase x offset in background-position of <footer> by 4px every 4 seconds
+// Increase x offset in background-position of <footer> by 3px every 4 seconds
 setInterval(function() {
   var footer = document.querySelector('footer');
   var currentOffset = parseInt(footer.style.backgroundPositionX) || 0;
   footer.style.backgroundPositionX = (currentOffset - 3) + 'px';
 }, 200);
     
-      var header = document.querySelector('header');
-      var headerbtn = document.getElementById('headerbtn');
-
+var header = document.querySelector('header');
+var headerbtn = document.getElementById('headerbtn');
 
 // Enables the header outline and shadow, shows button
-    function enableHeaderMode() {
-      header.classList.add('glass-shadow');
-      headerbtn.style.display = "inline";
-      headerbtn.style.opacity = "1";
-    }
+function enableHeaderMode() {
+  header.classList.add('glass-shadow');
+  headerbtn.style.display = "inline";
+  headerbtn.style.opacity = "1";
+}
 
 // Disables the header outline and shadow
 // Removes button after 200ms to allow it to animate out
 function disableHeaderMode() {
-      header.classList.remove('glass-shadow');
-      headerbtn.style.opacity = "0";
-      setTimeout(function() {
-        headerbtn.style.display = "none";
-      }, 200);
-    }
+  header.classList.remove('glass-shadow');
+  headerbtn.style.opacity = "0";
+  setTimeout(function() {
+    headerbtn.style.display = "none";
+  }, 200);
+}
 
 // Toggles header mode based on scroll past second button
-    function handleScroll() {
-      getTopButtonPosition();
+function handleScroll(entries) {
+  if (entries[0].isIntersecting) {
+    disableHeaderMode();
+  } else {
+    enableHeaderMode();
+  }
+}
 
-      if (window.scrollY > switchY) {
-        enableHeaderMode();
-      } else {
-        disableHeaderMode();
-      }
-    }
 // Debounce scroll to avoid fast scrolls not triggering header
-    function debounce(func, wait) {
+function debounce(func, wait) {
   let timeout;
   return function() {
     const context = this, args = arguments;
@@ -246,8 +260,15 @@ function disableHeaderMode() {
     timeout = setTimeout(() => func.apply(context, args), wait);
   };
 }
+
 // 20ms seems minimum amount required to correctly debounce
-window.addEventListener('scroll', debounce(handleScroll, 20));
+// window.addEventListener('scroll', debounce(handleScroll, 20));
+
+// Create an Intersection Observer instance
+var observer = new IntersectionObserver(handleScroll, { threshold: 0 });
+
+// Observe the topbtn element
+observer.observe(document.getElementById('topbtn'));
 
 
 
