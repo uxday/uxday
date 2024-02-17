@@ -4,7 +4,7 @@
     --text-secondary: #ccc;
     --background: #222;
     --foreground: #111;
-    --glass-bg: rgba(50, 50, 50, 0.85);
+    --glass-bg: rgba(20, 20, 20, 0.85);
     --glass-border: rgba(150, 150, 150, 0.2);
 
     --bus-img: url('bussign-dark.png');
@@ -48,7 +48,7 @@
 border-radius: 16px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-transition: .2s;
+transition: .3s;
 border: 1px solid transparent;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.0);
 }
@@ -939,11 +939,20 @@ border-radius: 4px;
         line-height: 24px;
     }
 
+
+
     .glass{
         border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 1px solid transparent;
     }
 
     .glass-shadow{
+        border-left: none;
+        border-right: none;
+        border-top: none;
         border-radius: 0px;
         border-bottom: 1px solid var(--glass-border);
     }
