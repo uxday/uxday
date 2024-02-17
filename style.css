@@ -617,10 +617,9 @@ header {
     left: 0;
     right: 0;
     width: auto;
-    border-radius: 12px;
     width: 812px;
     margin: 40px auto 0 auto;
-    z-index: 10;
+    z-index: 12;
 }
 
 .header-img{
@@ -886,7 +885,6 @@ border-radius: 4px;
 
     header{
         width: auto;
-        border-radius: 0px;
         margin: 0;
         top: 0;
         padding: 4px 14px 4px 22px;
