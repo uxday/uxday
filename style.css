@@ -48,7 +48,7 @@
 border-radius: 16px;
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-transition: .7s;
+transition: .2s;
 border: 1px solid transparent;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.0);
 }
@@ -136,6 +136,9 @@ body {
     height: 180px;
     z-index: 4;
     transition: .2s;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,.08);
+    webkit-box-shadow: 0px 4px 8px rgba(0,0,0,.08);
 }
 
 .person-name{
@@ -175,7 +178,7 @@ body {
 
 .isoverlay:hover + .person-photo {
     transform: scale(1.1);
-    border-radius: 0px 24px 0 12px;
+    /* border-radius: 0px 24px 0 12px; */
 }
 
 .tab-container{
@@ -908,10 +911,7 @@ border-radius: 4px;
         width: 70vw;
         height: 70vw;
         object-fit: cover;
-        /* object-position: 25% 25%;  */
         border-radius: 4px;
-        box-shadow: 0px 2px 10px rgba(0,0,0,.1);
-        webkit-box-shadow: 0px 2px 10px rgba(0,0,0,.1);
         border-radius: 8px;
     }
 

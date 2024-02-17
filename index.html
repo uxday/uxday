@@ -30,7 +30,7 @@
       <path d="M1407.42 16.0002L640.185 16.0001C631.321 16.0001 625.516 25.2797 629.394 33.2503L1004.09 803.336C1008.42 812.243 1021.07 812.361 1025.57 803.536L1418.11 33.4498C1422.18 25.4659 1416.38 16.0002 1407.42 16.0002Z" fill="var(--text-primary)"/>
       <path d="M1229.19 406.229L1044.5 25.7271C1040.17 16.8061 1027.51 16.6886 1023.01 25.5279L820 424.786L1004.67 804.336C1009.01 813.243 1021.66 813.36 1026.16 804.535L1229.19 406.229Z" fill="var(--background)"/>
       </svg>
-    <a id="headerbtn" class="button button-accent" href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">REGISTER NOW</a>
+    <a id="headerbtn" class="button button-accent" href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">REQUEST INVITE</a>
   </header>
   <div id="bg1" class="bg-blue entry-box vw-100 anim-stretch-in delay-2"></div>
   <div id="bg2" class="bg-red entry-box vw-100 anim-stretch-in delay-3"></div>
@@ -50,7 +50,7 @@
       dynamic locations
       - Bangalore, Noida, and Hyderabad, each offering a unique blend of insights, experiences, and opportunities.
     </p>  
-    <a class="button button-accent anim-fade-in-up delay-3" href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">REGISTER NOW</a>
+    <a id="topbtn" class="button button-accent anim-fade-in-up delay-3" href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRx8CRYOIU25EsVwwG_bjWJ1UM081SVlORTJEQlo3VUZDVklFSFZUMFI1SS4u">REQUEST INVITE</a>
   </div>
 
   <div class="section-1-bg"></div>
@@ -185,6 +185,20 @@
 </a>
   <script>
 
+var switchY = 0;
+getTopButtonPosition();
+console.log("Yo " + switchY);
+
+function getTopButtonPosition() {
+  var topbtn = document.getElementById('topbtn');
+  switchY = topbtn.offsetTop - 40;
+  // console.log("Button position: " + switchY);
+  // console.log("Current scroll position: " + window.scrollY);
+}
+
+window.addEventListener('resize', getTopButtonPosition);
+
+// Marquee scroll in footer
 // Increase x offset in background-position of <footer> by 4px every 4 seconds
 setInterval(function() {
   var footer = document.querySelector('footer');
@@ -192,33 +206,52 @@ setInterval(function() {
   footer.style.backgroundPositionX = (currentOffset - 3) + 'px';
 }, 200);
     
-
-
-    // Add glass shadow to header on scroll
-    window.addEventListener('scroll', function() {
       var header = document.querySelector('header');
-      if (window.scrollY * 1.8 > window.innerHeight) {
-        header.classList.add('glass-shadow');
-      } else {
-        header.classList.remove('glass-shadow');
-      }
       var headerbtn = document.getElementById('headerbtn');
-      if (window.scrollY > .6 * window.innerHeight) {
-        // headerbtn.style.transform = "translateY(0)";
-        headerbtn.style.display = "inline";
-        headerbtn.style.opacity = "1";
-        headerbtn.innerHTML = "REGISTER NOW";
 
+
+// Enables the header outline and shadow, shows button
+    function enableHeaderMode() {
+      header.classList.add('glass-shadow');
+      headerbtn.style.display = "inline";
+      headerbtn.style.opacity = "1";
+    }
+
+// Disables the header outline and shadow
+// Removes button after 200ms to allow it to animate out
+function disableHeaderMode() {
+      header.classList.remove('glass-shadow');
+      headerbtn.style.opacity = "0";
+      setTimeout(function() {
+        headerbtn.style.display = "none";
+      }, 200);
+    }
+
+// Toggles header mode based on scroll past second button
+    function handleScroll() {
+      getTopButtonPosition();
+
+      if (window.scrollY > switchY) {
+        enableHeaderMode();
       } else {
-        // headerbtn.style.transform = "translateY(-60px)";
-        headerbtn.style.opacity = "0";
-        setTimeout(function() {
-  headerbtn.style.display = "none";
-  headerbtn.addEventListener('click', replayAnim);
-}, 200);        
+        disableHeaderMode();
       }
-    });
+    }
+// Debounce scroll to avoid fast scrolls not triggering header
+    function debounce(func, wait) {
+  let timeout;
+  return function() {
+    const context = this, args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+// 20ms seems minimum amount required to correctly debounce
+window.addEventListener('scroll', debounce(handleScroll, 20));
 
+
+
+// Replay the background animation by toggling the class anim-stretch-in
 function replayAnim() {
   document.getElementById('bg1').classList.remove('anim-stretch-in');
   document.getElementById('bg2').classList.remove('anim-stretch-in');
@@ -231,18 +264,6 @@ function replayAnim() {
   document.getElementById('bg4').classList.add('anim-stretch-in');
 } , 50);
 }
-
-
-
-// Add glass shadow to header on scroll
-window.addEventListener('scroll', function() {
-  var header = document.querySelector('header');
-  if (window.scrollY * 2 > window.innerHeight) {
-    header.classList.add('glass-shadow');
-  } else {
-    header.classList.remove('glass-shadow');
-  }
-});
 
   </script>
 </body>
