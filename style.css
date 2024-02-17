@@ -628,6 +628,8 @@ header {
     margin-left: calc((100vw - 900px)/2);
     margin-top: 90px;
     margin-bottom: 20px;
+    z-index: 20;
+    position: relative;
 }
 
 .header-img:hover{
@@ -851,6 +853,9 @@ border-radius: 4px;
         font-size: 17px;
     }
 
+    .uxday-logo{
+        width: 64px;
+    }
 
     footer{
         background-size: 150%;
