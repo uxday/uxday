@@ -119,12 +119,36 @@ body {
 }
 
 @supports (view-timeline: --subjectReveal) {
+
+    /* .section:nth-child(even){
+        .person-card:nth-child(even){
+            animation-delay: 100ms;
+        }
+    }
+
+    .section:nth-child(odd){
+        .person-card:nth-child(odd){
+            animation-delay: 100ms;
+        }
+    } */
+
+
+    /* .person-card:nth-child(n+1){
+        animation-delay: 100ms;
+    }
+
+    .person-card:nth-child(n+2){
+        animation-delay: 200ms;
+    } */
+
+
     .person-card {
         view-timeline: --subjectReveal block;
         animation-timeline: --subjectReveal;
 
         animation-name: scrollY;
-        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation-timing-function:ease-in-out;
+        /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
         animation-fill-mode: both;
         animation-duration: 1ms; /* Firefox requires this to apply the animation */
     }
@@ -133,14 +157,12 @@ body {
 @keyframes scrollY {
     0% {
         transform: translateY(32px);
-        opacity: .8;
     }
     50% {
         opacity: 1;
     }
     100% {
         transform: translateY(-32px);
-        opacity: 1;
     }
 }
 
