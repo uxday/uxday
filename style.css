@@ -90,10 +90,10 @@ spline-viewer{
     transition: transform 0.5s ease-in-out;
 }
 
-.x-logo:hover {
+/* .x-logo:hover {
     animation: spin-wheel 4s both;
     animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
+} */
 
 html {
     background-color: var(--background);
