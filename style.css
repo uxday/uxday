@@ -2,7 +2,7 @@
 :root {
     --text-primary: #fff;
     --text-secondary: #ccc;
-    --background: #222;
+    --background: #242424;
     --foreground: #111;
     --glass-bg: rgba(20, 20, 20, 0.85);
     --glass-border: rgba(150, 150, 150, 0.2);
@@ -34,7 +34,7 @@
     :root {
         --text-primary: #000;
         --text-secondary: #36373b;
-        --background: #f4f4f4;
+        --background: #F4F4F4;
         --foreground: #fff;
         --glass-bg: rgba(255, 255, 255, 0.9);
         --glass-border: rgba(255, 255, 255, 0.3);

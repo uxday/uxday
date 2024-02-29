@@ -26,7 +26,12 @@
     rel="stylesheet">
 </head>
 <body>
-  <img onclick="replayAnim()" class="header-img anim-fade-in-up" src="header.png">
+
+  <picture onclick="replayAnim()">
+    <source srcset="render-dark.png" media="(prefers-color-scheme: dark)">
+    <img class="header-img anim-fade-in-up" src="render-light.png" alt="Animated wave shape">
+  </picture>
+
   <header class="glass anim-fade-in-up delay-1">
     <svg class="uxday-logo" width="1440" height="840" viewBox="0 0 1440 840" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M18 38.9412C18 25.1665 29.1665 14 42.9412 14H579.059C592.833 14 604 25.1665 604 38.9412V541C604 693.196 487.959 818.288 339.525 832.629C453.339 818.446 541.412 721.361 541.412 603.706C541.412 476.291 438.121 373 310.706 373C183.291 373 80 476.291 80 603.706C80 720.628 166.978 817.235 279.761 832.354C132.629 816.761 18 692.267 18 541V38.9412ZM660.166 14H1417.93C1427.26 14 1433.28 23.8701 1429.02 32.1691L1236.12 407.655L1429.33 794.07C1433.47 802.361 1427.45 812.117 1418.18 812.117L1028.34 812.118L654.61 812.117C645.237 812.117 639.214 802.164 643.563 793.86L838.497 421.715L648.951 31.9241C644.923 23.6411 650.956 14 660.166 14ZM1236 407.468L1056.58 46.6515C1052.04 37.5239 1039.06 37.4019 1034.35 46.4425L839 421.45L1017.66 790.876C1022.14 800.15 1035.3 800.294 1039.99 791.12L1236 407.468Z"/>
