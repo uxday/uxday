@@ -44,6 +44,13 @@
     }
 }
 
+.banner{
+    width: 800px;
+    margin: auto;
+    background-color: var(--glass-bg);
+    padding: 24px 24px 8px 24px;
+}
+
 .glass{
 border-radius: 16px;
 backdrop-filter: blur(10px);
@@ -894,6 +901,13 @@ border-radius: 4px;
     }
     body {
         font-size: 17px;
+    }
+
+    .banner{
+        width: auto;
+        margin: auto;
+        background-color: var(--glass-bg);
+        padding: 24px 24px 8px 24px;
     }
 
     footer{

@@ -57,11 +57,7 @@
         </svg>
         
         The AI Moment</h1>
-    <p class="text-secondary anim-fade-in-up delay-2">Join us on 15 March for an inspiring journey into the future
-      of User Experience,
-      centered around the thrilling theme: 'The AI Moment'. This year, we're excited to host the event across three
-      dynamic locations
-      - Bangalore, Noida, and Hyderabad, each offering a unique blend of insights, experiences, and opportunities.
+    <p class="text-secondary anim-fade-in-up delay-2">Join us on 15 March for an inspiring journey into the future of User Experience, centered around the thrilling theme: 'The AI Moment'. This year, we're excited to host the event across three dynamic locations - Bangalore, Noida, and Hyderabad, each offering a unique blend of insights, experiences, and opportunities.
     </p>  
     <a 
     id="topbtn" 
@@ -138,7 +134,7 @@
       </div>
       <div class="person-details">
         <p class="person-name">Gaurav Mathur</p>
-        <p class="person-title">VP, Design, Flipkart</p>
+        <p class="person-title">Vice President, Design at Flipkart</p>
       </div>
     </div>
 
@@ -149,7 +145,7 @@
       </div>
       <div class="person-details">
         <p class="person-name">Sriram Rajamani</p>
-        <p class="person-title">CVP & MD, Microsoft Research India</p>
+        <p class="person-title">Corporate Vice President and Managing Director, Microsoft Research India</p>
       </div>
     </div>
 
@@ -159,58 +155,28 @@
         <img class="person-photo" src="person6.jpg">
       </div>
       <div class="person-details">
-        <p class="person-name">Cassie Cropcircle</p>
-        <p class="person-title">Data Distortionist</p>
+        <p class="person-name">Coming Soon!</p>
+        <p class="person-title">Coming Soon!</p>
       </div>
     </div>
 
   </div>
 
 </div>
-<div class="section">
-  <div class="section-header">
-    <h1 class="text-primary-darkinvert">Microsoft Noida</h1>
-    <h3 class="text-secondary-darkinvert">Sovereign Capital Gate,<br>Film City, Sector 16A,<br>Noida</h3>
-    <a 
-    class="button-small button-accent-darkinvert" 
-    href="https://maps.app.goo.gl/M2oy8CtVCM3ELvVQ8"
-    target="_blank"
-    rel="noopener noreferrer">
-    Open Location</a>
-  </div>
-  <div class="person-card">
-    <div class="img-overlay-wrap">
-      <img class="isoverlay" src="frame-7.svg">
-      <img class="person-photo" src="ruchi_batra.jpg">
-    </div>
-    <div class="person-details">
-      <p class="person-name">Ruchi Batra</p>
-      <p class="person-title">Design Director, IBM iX</p>
-    </div>
-  </div>
 
-  <div class="person-card">
-    <div class="img-overlay-wrap">
-      <img class="isoverlay" src="frame-8.svg">
-      <img class="person-photo" src="ram_singla.jpg">
-    </div>
-    <div class="person-details">
-      <p class="person-name">Ram Singla</p>
-      <p class="person-title">VP Technology, Zomato</p>
-    </div>
-  </div>
-
-  <div class="person-card">
-    <div class="img-overlay-wrap">
-      <img class="isoverlay" src="frame-9.svg">
-      <img class="person-photo" src="vaibhav_bhutani.jpg">
-    </div>
-    <div class="person-details">
-      <p class="person-name">Vaibhav Bhutani</p>
-      <p class="person-title">AI lead, Blinkit</p>
-    </div>
-  </div>
-
+<div class="glass banner glass-shadow">
+  <h1 class="text-primary">Microsoft Noida</h1>
+  <h3 class="text-secondary">Sovereign Capital Gate,<br>Film City, Sector 16A,<br>Noida</h3>
+  <a 
+  class="button-small button-accent-darkinvert" 
+  href="https://maps.app.goo.gl/M2oy8CtVCM3ELvVQ8"
+  target="_blank"
+  rel="noopener noreferrer">
+  Open Location</a>
+  <p></p>
+  <hr>
+  <p class="text-secondary">Speaker details coming soon! Stay tuned for more updates.
+  </p>  
 </div>
 
   </div>
@@ -233,7 +199,7 @@ function fixStripeZ() {
   document.getElementById('bg3').style.height = '10px';
   document.getElementById('bg3').style.zIndex = '10';
 }
-// Wait for entry anim to play and then fix stripe z-index
+// Wait 2.5s for entry anim to play and then fix stripe z-index
 setTimeout(fixStripeZ, 2500);
 
 // Get the header and header button elements
@@ -266,7 +232,7 @@ function handleScroll(entries) {
   }
 }
 
-// Wait for load anim to play before setting up intersection observer
+// Wait 2s for load anim to play before setting up intersection observer
 setTimeout(function() {
 // Create an Intersection Observer instance
 var observer = new IntersectionObserver(handleScroll, { threshold: 0 });
