@@ -282,26 +282,27 @@ function disableHeaderMode() {
   headerbtn.style.opacity = "0";
   setTimeout(function() {
     headerbtn.style.display = "none";
-  }, 200);
+  }, 80);
 }
 
-// Toggles header mode based on scroll past second button
-function handleScroll(entries) {
-  if ((entries[0].isIntersecting) || (window.scrollY < 500)){
-    disableHeaderMode();
-  } else {
-    enableHeaderMode();
-  }
-}
 
-// Wait 2s for load anim to play before setting up intersection observer
-setTimeout(function() {
-// Create an Intersection Observer instance
-var observer = new IntersectionObserver(handleScroll, { threshold: 0 });
-// Observe the topbtn element
-  observer.observe(document.getElementById('topbtn'));
-}, 2000);
+// Get the y offset of div with id topbtn
+var topbtYOffset = Math.round(document.getElementById('topbtn').getBoundingClientRect().top);
+console.log(topbtYOffset);
 
+var scrollTimeout;
+
+window.addEventListener('scroll', function() {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(function() {
+    if (window.scrollY > topbtYOffset) {
+      enableHeaderMode();
+    }
+    else {
+      disableHeaderMode();
+    }
+  }, 80);
+});
 
 
 // Replay the background animation by toggling the class anim-stretch-in
