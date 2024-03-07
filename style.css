@@ -166,12 +166,17 @@ body {
 @keyframes scrollY {
     0% {
         transform: translateY(32px);
+        filter: grayscale(100%); /* 70% grayscale */
+    }
+    25% {
+        filter: grayscale(0%); /* 70% grayscale */
     }
     50% {
         opacity: 1;
     }
     100% {
         transform: translateY(-32px);
+
     }
 }
 
