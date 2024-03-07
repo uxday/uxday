@@ -917,6 +917,9 @@ border-radius: 4px;
         font-size: 17px;
     }
 
+    table {
+        margin: 12px 0px 20px 0px;
+    }
     .banner{
         width: auto;
         margin: auto;
