@@ -267,6 +267,7 @@ setTimeout(fixStripeZ, 2500);
 // Get the header and header button elements
 var header = document.querySelector('header');
 var headerbtn = document.getElementById('headerbtn');
+var topbtn = document.getElementById('topbtn');
 
 // Enables the header outline and shadow, shows button
 function enableHeaderMode() {
@@ -285,24 +286,22 @@ function disableHeaderMode() {
   }, 80);
 }
 
-
-// Get the y offset of div with id topbtn
-var topbtYOffset = Math.round(document.getElementById('topbtn').getBoundingClientRect().top);
-console.log(topbtYOffset);
+// Enable or disable headermode based on whether scroll is past position of topbtn
 
 var scrollTimeout;
 
-window.addEventListener('scroll', function() {
+function handleScroll() {
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(function() {
-    if (window.scrollY > topbtYOffset) {
+    if (window.scrollY > topbtn.offsetTop) {
       enableHeaderMode();
-    }
-    else {
+    } else {
       disableHeaderMode();
     }
   }, 80);
-});
+}
+
+window.addEventListener('scroll', handleScroll);
 
 
 // Replay the background animation by toggling the class anim-stretch-in
